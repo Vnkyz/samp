@@ -2,7 +2,7 @@ const express = require('express')
 const query = require('samp-query')
 const app = express()
 
-app.get('/api', function (req, res) {
+app.get('/api/samp', function (req, res) {
     const ip = req.query.ip;
     const port = req.query.port;
     const Serverip = `${ip}:${port}`;
