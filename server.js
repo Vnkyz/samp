@@ -34,4 +34,11 @@ app.get('*', function(req, res){
     res.status(404).json({'404': 'Not Found! Enter IP AND PORT'});
   });
 
-app.listen(() => console.log(`listening at port 5000`))
+const PORT = process.env.PORT || 5000;
+
+const server = app.listen(
+  PORT,
+  console.log(
+    `Server running in ${process.env.NODE_ENV} mode on port ${PORT}`
+  )
+);
